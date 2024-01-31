@@ -1,0 +1,96 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+table {
+border-collapse: collapse;
+border: 2px solid rgb(200,200,200);
+letter-spacing: 1px;
+font-size: 0.7rem;
+width:100%;
+margin:0px
+}
+.largo{
+    width:min-content;
+    font-size:0.5rem;
+    height:15px;
+    
+}
+.adeuda{
+    width: 20%;
+    text-align: start;
+}
+.contenedor-nombre{
+    display:flex;
+    align-items:center;
+    margin:0px;
+    padding:0px;
+    
+    
+}
+input{
+    font-size:15px;
+    margin:5px;
+    width: 25px;
+    text-align:center;
+}
+.texto{
+    font-size:0.7rem;
+    margin:0px;
+    padding:0px
+}
+p{
+    margin:0px;
+}
+td, th {
+border: 1px solid rgb(190,190,190);
+padding: 2px 1px 2px 3px;
+}
+
+.texto-center{
+    text-align: center;
+}
+.texto-start{
+    text-align: start;
+}
+.texto-final{
+    font-size:0.9rem;
+}
+tr:nth-child(even) td,th {
+background-color: rgb(250,250,250);
+}
+
+tr:nth-child(odd) td {
+background-color: rgb(245,245,245);
+}
+.hola{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:10px;
+}
+
+/* ______________________________________________________________________________________________- */
+.contenedor-flex{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-linea{
+    width: 90%;
+    border: 1px solid rgb(243, 156, 18);
+    padding: 5% 10%;
+}
+.texto{
+    font-size: 1em;
+    text-align: center;
+}
+.botones{
+    display: flex;
+    justify-content: space-around;
+    padding: 5% 0% 0% 0%;
+    flex-wrap: wrap;
+}
+.botones a{
+    margin: 15px;
+}
