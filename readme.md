@@ -4,7 +4,7 @@
 
 Este proyecto es la página web oficial de la escuela, diseñada para gestionar el registro de alumnos y la creación de boletines. Proporciona funcionalidades para realizar altas, bajas y modificaciones tanto en la base de datos de alumnos como en la de boletines. Además, los usuarios pueden consultar la información de los alumnos y los boletines almacenados.
 
-Los boletines generados están disponibles en formato PDF para su descarga. Para la generación de PDFs, se utiliza la librería DonPDF.
+Los boletines generados están disponibles en formato PDF para su descarga. Para la generación de PDFs, se utiliza la librería Dompdf.
 
 El sistema utiliza MySQL como gestor de base de datos y se ejecuta en el entorno de desarrollo XAMPP, utilizando el módulo de Apache para el servidor web.
 
@@ -24,7 +24,7 @@ El sistema utiliza MySQL como gestor de base de datos y se ejecuta en el entorno
 
 - **Lenguaje de Programación**: PHP
 - **Gestor de Base de Datos**: MySQL
-- **Librería para PDFs**: DonPDF
+- **Librería para PDFs**: Dompdf
 - **Entorno de Desarrollo**: XAMPP
 - **Servidor Web**: Apache
 
@@ -44,12 +44,35 @@ Una vez que hayas configurado y lanzado el proyecto, podrás acceder a las sigui
 - Gestión de Alumnos: Permite agregar, eliminar y modificar registros de alumnos, así como consultar la información almacenada.
 - Gestión de Boletines: Permite generar boletines, gestionarlos (agregar, eliminar y modificar) y consultarlos. Además, podrás descargar los boletines en formato PDF.
 
-## Contribución
+## Descarga e Integración de Dompdf
 
-Si deseas contribuir al desarrollo de este proyecto, ¡te damos la bienvenida! Siéntete libre de bifurcar el repositorio y enviar solicitudes de extracción con tus mejoras.
+Dompdf es una biblioteca PHP que te permite generar archivos PDF desde HTML y CSS. Aquí hay un atajo para descargar y empezar a usar Dompdf en tu proyecto:
 
-## Licencia
+1. **Descarga Dompdf**: Visita el [repositorio oficial de Dompdf en GitHub](https://github.com/dompdf/dompdf) y descarga la última versión del código fuente.
 
-Este proyecto está bajo la Licencia [MIT](LICENSE).
-# PaginaWebEscuela
-# PaginaEscuela
+2. **Integración en tu Proyecto**:
+   - Descomprime el archivo descargado en tu proyecto.
+   - Asegúrate de que el directorio de Dompdf esté accesible para tu aplicación PHP.
+   - Asegúrate de que la carpeta dompdf este dentro de la carpeta inicio.
+
+3. **Uso Básico**:
+   - Para generar un PDF, simplemente incluye Dompdf en tu script PHP y usa su API para renderizar el contenido HTML en un archivo PDF.
+
+   ```php
+   <?php
+   require_once 'dompdf/autoload.inc.php';
+
+   use Dompdf\Dompdf;
+
+   // Crea una instancia de Dompdf
+   $dompdf = new Dompdf();
+
+   // Renderiza el HTML como PDF
+   $dompdf->loadHtml('<h1>Hola, mundo!</h1>');
+
+   // Renderiza el PDF
+   $dompdf->render();
+
+   // Genera el PDF en la salida
+   $dompdf->stream('documento.pdf');
+   ?>
